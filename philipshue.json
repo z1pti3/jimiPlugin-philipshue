@@ -1,0 +1,670 @@
+{
+   "name": "philipshue",
+   "author": "z1p",
+   "version": 0.33,
+   "categories": [],
+   "description": "",
+   "icon": null,
+   "requirements": {
+      "jimi_min_version": null,
+      "jimi_max_version": null,
+      "plugins": []
+   },
+   "collections": {},
+   "triggers": {},
+   "actions": {
+      "philipshueMotionDetected": {
+         "display_name": "philipshueMotionDetected",
+         "className": "_philipshueMotionDetected",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            },
+            {
+               "schema_item": "sensorName",
+               "schema_value": "sensorName",
+               "type": "input",
+               "label": "sensorName",
+               "description": ""
+            },
+            {
+               "schema_item": "detectionPause",
+               "schema_value": "detectionPause",
+               "type": "input",
+               "label": "detectionPause",
+               "description": ""
+            },
+            {
+               "schema_item": "refreshSensor",
+               "schema_value": "refreshSensor",
+               "type": "checkbox",
+               "label": "refreshSensor",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "philipshueGetSensors": {
+         "display_name": "philipshueGetSensors",
+         "className": "_philipshueGetSensors",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "philipshueGetSensor": {
+         "display_name": "philipshueGetSensor",
+         "className": "_philipshueGetSensor",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            },
+            {
+               "schema_item": "sensorName",
+               "schema_value": "sensorName",
+               "type": "input",
+               "label": "sensorName",
+               "description": ""
+            },
+            {
+               "schema_item": "refreshSensor",
+               "schema_value": "refreshSensor",
+               "type": "checkbox",
+               "label": "refreshSensor",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "philipshueLighThreshold": {
+         "display_name": "philipshueLighThreshold",
+         "className": "_philipshueLighThreshold",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            },
+            {
+               "schema_item": "sensorName",
+               "schema_value": "sensorName",
+               "type": "input",
+               "label": "sensorName",
+               "description": ""
+            },
+            {
+               "schema_item": "minLightLevel",
+               "schema_value": "minLightLevel",
+               "type": "input",
+               "label": "minLightLevel",
+               "description": ""
+            },
+            {
+               "schema_item": "refreshSensor",
+               "schema_value": "refreshSensor",
+               "type": "checkbox",
+               "label": "refreshSensor",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "philipshueLightOn": {
+         "display_name": "philipshueLightOn",
+         "className": "_philipshueLightOn",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            },
+            {
+               "schema_item": "lightName",
+               "schema_value": "lightName",
+               "type": "input",
+               "label": "lightName",
+               "description": ""
+            },
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            },
+            {
+               "schema_item": "lightName",
+               "schema_value": "lightName",
+               "type": "input",
+               "label": "lightName",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "philipshueLightOff": {
+         "display_name": "philipshueLightOff",
+         "className": "_philipshueLightOff",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            },
+            {
+               "schema_item": "lightName",
+               "schema_value": "lightName",
+               "type": "input",
+               "label": "lightName",
+               "description": ""
+            },
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            },
+            {
+               "schema_item": "lightName",
+               "schema_value": "lightName",
+               "type": "input",
+               "label": "lightName",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "philipshueGetLight": {
+         "display_name": "philipshueGetLight",
+         "className": "_philipshueGetLight",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            },
+            {
+               "schema_item": "lightName",
+               "schema_value": "lightName",
+               "type": "input",
+               "label": "lightName",
+               "description": ""
+            },
+            {
+               "schema_item": "refreshLight",
+               "schema_value": "refreshLight",
+               "type": "checkbox",
+               "label": "refreshLight",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "philipshueGetLights": {
+         "display_name": "philipshueGetLights",
+         "className": "_philipshueGetLights",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "philipshueGroupOn": {
+         "display_name": "philipshueGroupOn",
+         "className": "_philipshueGroupOn",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            },
+            {
+               "schema_item": "groupName",
+               "schema_value": "groupName",
+               "type": "input",
+               "label": "groupName",
+               "description": ""
+            },
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            },
+            {
+               "schema_item": "groupName",
+               "schema_value": "groupName",
+               "type": "input",
+               "label": "groupName",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      },
+      "philipshueGroupOff": {
+         "display_name": "philipshueGroupOff",
+         "className": "_philipshueGroupOff",
+         "class_location": "models.action",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            },
+            {
+               "schema_item": "groupName",
+               "schema_value": "groupName",
+               "type": "input",
+               "label": "groupName",
+               "description": ""
+            },
+            {
+               "schema_item": "apiAddress",
+               "schema_value": "apiAddress",
+               "type": "input",
+               "label": "apiAddress",
+               "description": ""
+            },
+            {
+               "schema_item": "user",
+               "schema_value": "user",
+               "type": "input",
+               "label": "user",
+               "description": ""
+            },
+            {
+               "schema_item": "groupName",
+               "schema_value": "groupName",
+               "type": "input",
+               "label": "groupName",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      }
+   },
+   "settings": {}
+}
